@@ -7,7 +7,7 @@ import {
   BarChart3,
   Shield
 } from "lucide-react";
-import { cn } from "@/lib";
+import { cn } from "@/lib/utils";
 
 const navItems = [
   {
