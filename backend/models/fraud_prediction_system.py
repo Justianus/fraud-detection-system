@@ -27,7 +27,7 @@ class FraudPredictionSystem:
         self.feature_names = []
         self.is_trained = False
         
-    def train_model(self, data_path='insurance_fraud_datasetCOMBINED.csv'):
+    def train_model(self, data_path='../data/insurance_fraud_datasetCOMBINED.csv'):
         """Train the model using your dataset."""
         print("Training the fraud detection model...")
         

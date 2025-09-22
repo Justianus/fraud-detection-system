@@ -746,9 +746,10 @@ if __name__ == '__main__':
         print("  POST /api/claims/<id>/predict - Predict fraud for claim")
         print("  POST /api/batch-predict - Batch fraud prediction")
         print("  GET  /api/dashboard/stats - Dashboard statistics")
-        print("\nServer running on http://localhost:5000")
+        port = int(os.environ.get('PORT', 5000))
+        print(f"\nServer running on http://localhost:{port}")
         
-        app.run(debug=True, host='0.0.0.0', port=5000)
+        app.run(debug=False, host='0.0.0.0', port=port)
         
     except Exception as e:
         logger.error(f"Failed to start server: {str(e)}")
