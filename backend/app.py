@@ -737,23 +737,25 @@ def initialize_system():
 if __name__ == '__main__':
     try:
         initialize_system()
-        print("🚀 Starting Fraud Detection API Server...")
-        print("API Endpoints:")
-        print("  GET  /api/health - Health check")
-        print("  POST /api/claims - Create new claim")
-        print("  GET  /api/claims - Get all claims")
-        print("  GET  /api/claims/<id> - Get specific claim")
-        print("  POST /api/claims/<id>/predict - Predict fraud for claim")
-        print("  POST /api/batch-predict - Batch fraud prediction")
-        print("  GET  /api/dashboard/stats - Dashboard statistics")
-        port = int(os.environ.get('PORT', 5000))
-        print(f"\nServer running on http://localhost:{port}")
-        
-        app.run(debug=False, host='0.0.0.0', port=port)
-        
     except Exception as e:
-        logger.error(f"Failed to start server: {str(e)}")
-        print(f"❌ Error: {str(e)}")
+        logger.error(f"Failed to initialize system: {str(e)}")
+        print(f"⚠️  Warning: {str(e)}")
+        print("Starting server with basic functionality...")
+    
+    print("🚀 Starting Fraud Detection API Server...")
+    print("API Endpoints:")
+    print("  GET  /api/health - Health check")
+    print("  POST /api/claims - Create new claim")
+    print("  GET  /api/claims - Get all claims")
+    print("  GET  /api/claims/<id> - Get specific claim")
+    print("  POST /api/claims/<id>/predict - Predict fraud for claim")
+    print("  POST /api/batch-predict - Batch fraud prediction")
+    print("  GET  /api/dashboard/stats - Dashboard statistics")
+    
+    port = int(os.environ.get('PORT', 5000))
+    print(f"\nServer running on http://localhost:{port}")
+    
+    app.run(debug=False, host='0.0.0.0', port=port)
 
 
 
