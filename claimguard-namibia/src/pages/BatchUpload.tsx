@@ -511,3 +511,4 @@ CLM-BATCH-003,45-55,Male,Married,Medium,Self-employed,true,Low,60,45,2,Commercia
     </div>
   );
 }
+

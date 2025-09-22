@@ -18,3 +18,4 @@ export function RiskBadge({ level, percentage }: RiskBadgeProps) {
     </Badge>
   );
 }
+
